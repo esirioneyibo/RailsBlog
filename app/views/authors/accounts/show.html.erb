@@ -1,0 +1,14 @@
+<div>
+  <%= link_to 'Update Info', authors_info_update_path, class: 'btn btn-sm btn-warning' %>  
+</div>
+
+<div class="row">
+  <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-xs-center">
+    <h1><%=@author.name %></h1>
+    <div style = "width:400px; height:auto">
+    <%#= image_tag(@author.image, style:'width:100%') %>
+    </div>
+    <p><%= @author.bio %></p>    
+
+  </div>
+</div>

@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   root to: 'blog/posts#index'
 
   namespace :authors do
-    get '/account' => 'accounts#edit', as: :account
+    get '/account' => 'accounts#show', as: :account 
+    get '/account_info' => 'accounts#edit', as: :info_update
     put '/info' => 'accounts#update_info', as: :info
     put '/change_password' => 'accounts#change_password', as: :change_password
     resources :posts do

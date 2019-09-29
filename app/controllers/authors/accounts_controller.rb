@@ -1,9 +1,16 @@
 module Authors
-  class AccountsController < AuthorController
+  class AccountsController < AuthorController    
+    before_action :authenticate_author!
+
 
     def edit
 
     end
+
+    def show
+     current_author
+    end
+
 
     def update_info
       if current_author.update(author_info_params)
@@ -32,7 +39,7 @@ module Authors
     private
 
     def author_info_params
-      params.require(:author).permit(:name, :email, :bio)
+      params.require(:author).permit(:name, :email, :bio, :image)
     end
 
     def author_password_params

@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.6.2'
+
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -43,7 +43,8 @@ gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.
 
 gem 'annotate'
 gem 'will_paginate', '~> 3.1.0'
-gem 'acts-as-taggable-on', '~> 4.0'
+gem 'acts-as-taggable-on', '~> 5.0'
+gem 'better_errors', '~> 2.5', '>= 2.5.1'
 
 group :development, :test do
 	gem 'pry-rails'

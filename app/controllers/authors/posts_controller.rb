@@ -1,6 +1,7 @@
 module Authors
   class PostsController < AuthorController
     before_action :set_post, only: [:show, :edit, :update, :destroy, :publish, :unpublish]
+    
 
     # GET /posts
     # GET /posts.json
@@ -35,7 +36,7 @@ module Authors
     # POST /posts
     # POST /posts.json
     def create
-      @post = current_author.posts.new(post_params)
+      @post = current_author.posts.new(post_params)      
 
       respond_to do |format|
         if @post.save
@@ -80,7 +81,7 @@ module Authors
 
       # Never trust parameters from the scary internet, only allow the white list through.
       def post_params
-        params.require(:post).permit(:title, :body, :description, :banner_image_url, :tag_list)
+        params.require(:post).permit(:title, :body, :description, :tag_list, :image)
       end
   end
 
